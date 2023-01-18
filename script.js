@@ -11,19 +11,16 @@ let getComputerChoice = () =>{
 let playRound = (playerSelection,computerSelection) =>{
     /* DRAW CONDITION */
     if(playerSelection === computerSelection){
-        console.log(playerSelection,computerSelection);
     return outcome =`Draw!: ${playerSelection} is same as ${computerSelection}`;
     } 
      /* WIN CONDITION */
     else if((playerSelection === 'ROCK' && computerSelection === 'SCISSORS') || (playerSelection === 'SCISSORS' && computerSelection === 'PAPER') ||(playerSelection === 'PAPER' && computerSelection === 'ROCK')){
         playerScore+=1;
-        console.log(playerSelection,computerSelection);
         return outcome = `Player won! Player's: ${playerSelection} beats Computers': ${computerSelection}`;
     }
      /* LOSE CONDITION */
     else{
         computerScore+=1;
-        console.log(playerSelection,computerSelection);
         return outcome = `You Lose! Computer's: ${computerSelection} beats Player's: ${playerSelection}`;
     }
 }
