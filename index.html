@@ -4,10 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <a href="style.css"></a>
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 <body>
-    <script src="script.js"></script>
+    <div class="header"><h1>Rock, Paper, Scissors!</h1></div>
+    <div class="playGround">
+        <div class="game">
+            <div class="playerChoice">
+                <p class="name">Player:</p>
+                <li class="health-bar">
+                    <ul>&#10084;</ul>
+                    <ul>&#10084;</ul>
+                    <ul>&#10084;</ul>
+                    <ul>&#10084;</ul>
+                    <ul>&#10084;</ul>
+                    
+                 </li>
+                <img class= "js-choice" src="./icons/rockWin.jpg" alt="" class="rock">
+               
+            </div>
+
+            <div class="vs-text"><p>VS!</p></div>
+
+            <div class="computerChoice">
+                <p class="name">Computer</p>
+                <li class="health-bar">
+                    <ul>&#10084;</ul>
+                    <ul>&#10084;</ul>
+                    <ul>&#10084;</ul>
+                    <ul>&#10084;</ul>
+                    <ul>&#10084;</ul>  
+                 </li>
+                <img class= "js-choice" src="./icons/scissorsLose.jpg" alt="" class="scissors">
+                
+            </div>  
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="selection-text">Select Your Warrior</div>
+        <div class="selection">
+            <button><img class="selection-img" src="./icons/rockWin.jpg" alt="" class="rock"></button>
+            <button><img class="selection-img"src="./icons/paperWin.jpg" alt="" class="paper"></button>
+            <button><img class="selection-img"src="./icons/scissorsWin.png" alt="" class="scissors"></button>
+        </div>
+    </div>
+
+
+
+    
 </body>
 </html>
