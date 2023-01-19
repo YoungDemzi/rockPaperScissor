@@ -34,7 +34,7 @@ const playRound = (playerSelection,computerSelection) =>{
             playerIcon.style.transform= "rotate(180deg)";
         }
         else{
-            playerIcon.src =`https://youngdemzi.github.io/rockPaperScissor/icons/${playercChoice.toLowerCase()}lose.png`;
+            playerIcon.src =`https://youngdemzi.github.io/rockPaperScissor/icons/${playercChoice.toLowerCase()}Lose.png`;
             playerIcon.style.transform= "rotate(0deg)";
             }
             computerIcon.src =`https://youngdemzi.github.io/rockPaperScissor/icons/${computerSelection.toLowerCase()}Lose.png`; 
