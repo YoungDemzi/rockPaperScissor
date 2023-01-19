@@ -30,14 +30,14 @@ const playRound = (playerSelection,computerSelection) =>{
         roundResult.style.color= "orange";
 
         if(playerSelection === "SCISSORS"){
-            playerIcon.src =`./icons/${playercChoice.toLowerCase()}Lose.png`;
+            playerIcon.src =`https://youngdemzi.github.io/rockPaperScissor/icons/${playercChoice.toLowerCase()}Lose.png`;
             playerIcon.style.transform= "rotate(180deg)";
         }
         else{
-            playerIcon.src =`./icons/${playercChoice.toLowerCase()}lose.png`;
+            playerIcon.src =`https://youngdemzi.github.io/rockPaperScissor/icons/${playercChoice.toLowerCase()}lose.png`;
             playerIcon.style.transform= "rotate(0deg)";
             }
-            computerIcon.src =`./icons/${computerSelection.toLowerCase()}Lose.png`; 
+            computerIcon.src =`https://youngdemzi.github.io/rockPaperScissor/icons/${computerSelection.toLowerCase()}Lose.png`; 
     } 
      /* WIN CONDITION */
     else if((playerSelection === 'ROCK' && computerSelection === 'SCISSORS') || (playerSelection === 'SCISSORS' && computerSelection === 'PAPER') ||(playerSelection === 'PAPER' && computerSelection === 'ROCK')){
@@ -48,14 +48,14 @@ const playRound = (playerSelection,computerSelection) =>{
         roundResult.style.color= "green";
         
         if(playerSelection === "SCISSORS"){
-            playerIcon.src =`./icons/${playercChoice.toLowerCase()}Win.png`;
+            playerIcon.src =`https://youngdemzi.github.io/rockPaperScissor/icons/${playercChoice.toLowerCase()}Win.png`;
             playerIcon.style.transform= "rotate(180deg)";
         }
         else{
-            playerIcon.src =`./icons/${playercChoice.toLowerCase()}Win.png`;
+            playerIcon.src =`https://youngdemzi.github.io/rockPaperScissor/icons/${playercChoice.toLowerCase()}Win.png`;
             playerIcon.style.transform= "rotate(0deg)";
             }
-            computerIcon.src =`./icons/${computerSelection.toLowerCase()}Lose.png`; 
+            computerIcon.src =`https://youngdemzi.github.io/rockPaperScissor/icons/${computerSelection.toLowerCase()}Lose.png`; 
          
     }
      /* LOSE CONDITION */
