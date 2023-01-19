@@ -42,7 +42,8 @@ const playRound = (playerSelection,computerSelection) =>{
      /* WIN CONDITION */
     else if((playerSelection === 'ROCK' && computerSelection === 'SCISSORS') || (playerSelection === 'SCISSORS' && computerSelection === 'PAPER') ||(playerSelection === 'PAPER' && computerSelection === 'ROCK')){
 
-        computerHealh[4-playerScore].style.color= "black";
+        computerHealh[4-playerScore].textContent= "\u2620";
+        computerHealh[4-playerScore].style.color="black";
         playerScore+=1;
         roundResult.textContent="YOU WON!";
         roundResult.style.color= "green";
@@ -60,7 +61,8 @@ const playRound = (playerSelection,computerSelection) =>{
     }
      /* LOSE CONDITION */
     else{
-        playerHealth[4-computerScore].style.color= "black";
+        playerHealth[4-computerScore].textContent= "\u2620";
+        playerHealth[4-computerScore].style.color="black";
         computerScore+=1;
         roundResult.textContent="YOU LOST!";
         roundResult.style.color= "brown";
