@@ -17,7 +17,7 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+	
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -26,6 +26,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    
 }
 ol, ul {
 	list-style: none;
@@ -52,27 +53,29 @@ body{/*-------------BODY, HEADER CONTENT-------------*/
     background-size: cover; /* Resize the background image to cover the entire container */
     text-align: center;
     font-family: 'Permanent Marker', cursive;
-    position: relative;
+    
+    
 }
 .header{
     text-align: center;
     font-family: 'Permanent Marker', cursive;
-    font-size: 5em;
-    opacity:0.9;
-
-    
+    font-size: 5em;     
 }
 .playGround{/*-------------PLAYGROUND CONTENT-------------*/
- padding-top: 10rem;
- padding-bottom: 10rem;
+ padding-top: 8rem;
+ padding-bottom: 8rem;
+ 
 }
 .js-choice{
+    transition: 0.4s;
     width: 20rem;
+    opacity: 1;
 }
 .game{
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 .playerChoice, .computerChoice{
 font-size: 2rem;
@@ -89,15 +92,15 @@ color: brown;
     justify-content: center;
     color: brown;
 }
-
-/*-------------SELECTION CONTENT-------------*/
-.bottom{
-    
+.round-result{
+    transition: 0.4s;
+    font-size: 3rem;  
 }
+/*-------------BOTTOM CONTENT-------------*/
+
 button{
     border: 0px;
     background: none;
-    padding: 0;
     
 }
 button:hover {
@@ -117,4 +120,106 @@ button:hover {
 .selection-img{
     width: 10rem;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+        .header{
+        font-size: 2.5rem;
+        }
+        .js-choice{
+            transition: 0.4s;
+            width: 6rem;
+        }
+        .playerChoice, .computerChoice{
+            font-size: 1.5rem;
+        }
+        .vs-text{
+            font-size: 3rem;
+        }
+        .round-result{
+            transition: 0.4s;
+            font-size: 1.5rem;  
+        }
+        .selection-img{
+            width: 4rem;
+        }
+        .selection-text{
+            font-size: 1.5rem;
+        }
+    }
+    @media only screen and (min-width: 600px) {
+        .header{
+            font-size: 4rem;
+        }
+        .js-choice{
+            transition: 0.4s;
+            width: 12rem;
+        }
+        .playerChoice, .computerChoice{
+            font-size: 2rem;
+        }
+        .vs-text{
+            font-size: 4rem;
+        }
+        .round-result{
+            transition: 0.4s;
+            font-size: 2rem;  
+        }
+        .selection-img{
+            width: 6rem;
+        }
+        .selection-text{
+            font-size: 1.5rem;
+        }
+    }
+    @media only screen and (min-width: 768px) {
+        .header{
+            font-size: 5rem;
+        }
+        .js-choice{
+            transition: 0.4s;
+            width: 16rem;
+        }
+        .playerChoice, .computerChoice{
+            font-size: 3rem;
+        }
+        .vs-text{
+            font-size: 6rem;
+        }
+        .round-result{
+            transition: 0.4s;
+            font-size: 2rem;  
+        }
+        .selection-img{
+            width: 7rem;
+        }
+        .selection-text{
+            font-size: 2rem;
+        }
+    }
+    @media only screen and (min-width: 992px) {
+        .header{
+            font-size: 6rem;
+        }
+        .js-choice{
+            transition: 0.4s;
+            width: 20rem;
+        }
+        .playerChoice, .computerChoice{
+            font-size: 3rem;
+        }
+        .vs-text{
+            font-size: 6rem;
+        }
+        .round-result{
+            transition: 0.4s;
+            font-size: 3rem;  
+        }
+        .selection-img{
+            width: 10rem;
+        }
+        .selection-text{
+            font-size: 3rem;
+        }
+    }
 

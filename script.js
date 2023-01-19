@@ -1,36 +1,83 @@
 let computerScore=0;
 let playerScore=0;
+let playercChoice='';
+const choiceBtns = document.querySelectorAll("button");
+const roundResult = document.querySelector(".round-result");
+const playerIcon = document.querySelector(".playerIcon");
+const computerIcon = document.querySelector(".computerIcon");
+const playerHealth = document.querySelectorAll(".pla-hb");
+const computerHealh = document.querySelectorAll(".com-hb");
 
-let getComputerChoice = () =>{
-    let computerChoice=['Rock','Paper','Scissors'];
+const getComputerChoice = () =>{
+    let computerChoice=['ROCK','PAPER','SCISSORS'];
     let random = Math.floor(Math.random()*computerChoice.length);
-    let upperComp=computerChoice[random];
-    return upperComp.toUpperCase();
+    return computerChoice[random];
     
 }
-let playRound = (playerSelection,computerSelection) =>{
+choiceBtns.forEach(button => button.addEventListener("click",()=>{
+    playercChoice=button.className;
+    playRound(playercChoice,getComputerChoice());
+    if(computerScore == 5 || playerScore == 5){
+        game();
+        playerScore=0;
+        computerScore=0;
+    }
+}));
+const playRound = (playerSelection,computerSelection) =>{
     /* DRAW CONDITION */
     if(playerSelection === computerSelection){
-    return outcome =`Draw!: ${playerSelection} is same as ${computerSelection}`;
+        roundResult.textContent="DRAW!";
+        roundResult.style.color= "orange";
+
+        if(playerSelection === "SCISSORS"){
+            playerIcon.src =`./icons/${playercChoice.toLowerCase()}Lose.png`;
+            playerIcon.style.transform= "rotate(180deg)";
+        }
+        else{
+            playerIcon.src =`./icons/${playercChoice.toLowerCase()}lose.png`;
+            playerIcon.style.transform= "rotate(0deg)";
+            }
+            computerIcon.src =`./icons/${computerSelection.toLowerCase()}Lose.png`; 
     } 
      /* WIN CONDITION */
     else if((playerSelection === 'ROCK' && computerSelection === 'SCISSORS') || (playerSelection === 'SCISSORS' && computerSelection === 'PAPER') ||(playerSelection === 'PAPER' && computerSelection === 'ROCK')){
+
+        computerHealh[4-playerScore].style.color="black";
         playerScore+=1;
-        return outcome = `Player won! Player's: ${playerSelection} beats Computers': ${computerSelection}`;
+        roundResult.textContent="YOU WON!";
+        roundResult.style.color= "green";
+        
+        if(playerSelection === "SCISSORS"){
+            playerIcon.src =`./icons/${playercChoice.toLowerCase()}Win.png`;
+            playerIcon.style.transform= "rotate(180deg)";
+        }
+        else{
+            playerIcon.src =`./icons/${playercChoice.toLowerCase()}Win.png`;
+            playerIcon.style.transform= "rotate(0deg)";
+            }
+            computerIcon.src =`./icons/${computerSelection.toLowerCase()}Lose.png`; 
+         
     }
      /* LOSE CONDITION */
     else{
+        playerHealth[4-computerScore].style.color="black";
         computerScore+=1;
-        return outcome = `You Lose! Computer's: ${computerSelection} beats Player's: ${playerSelection}`;
+        roundResult.textContent="YOU LOST!";
+        roundResult.style.color= "brown";
+        
+        if(playerSelection === "SCISSORS"){
+            playerIcon.src =`./icons/${playercChoice.toLowerCase()}Lose.png`;
+            playerIcon.style.transform= "rotate(180deg)";
+        }
+        else{
+            playerIcon.src =`./icons/${playercChoice.toLowerCase()}Lose.png`;
+            playerIcon.style.transform= "rotate(0deg)";
+            }
+            computerIcon.src =`./icons/${computerSelection.toLowerCase()}Win.png`; 
     }
 }
-let game = () =>
+const game = () =>
 {
-    for(let i=0;i<5;i++)
-    {
-        let getPlayerChoice = prompt('Choose between Rock, Paper, Scissors and write it in the box');
-        console.log(playRound(getPlayerChoice.toUpperCase(), getComputerChoice()));
-    }
     let finalWinner;
     let winnerScore;
     if(computerScore>playerScore){
@@ -42,6 +89,5 @@ let game = () =>
         winnerScore=playerScore;
     }
     console.log(`AND THE FINAL WINNER WITH SCORE OF ${winnerScore} IS ${finalWinner}`);
-
 }
-game();
+
