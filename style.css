@@ -59,11 +59,12 @@ body{/*-------------BODY, HEADER CONTENT-------------*/
 .header{
     text-align: center;
     font-family: 'Permanent Marker', cursive;
-    font-size: 5em;     
+    font-size: 5em; 
+    padding-top: 1rem;    
 }
 .playGround{/*-------------PLAYGROUND CONTENT-------------*/
- padding-top: 8rem;
- padding-bottom: 8rem;
+ padding-top: 7.5rem;
+ padding-bottom: 7.5rem;
  
 }
 .js-choice{
