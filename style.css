@@ -76,6 +76,7 @@ body{/*-------------BODY, HEADER CONTENT-------------*/
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
    
 }
 .playerChoice, .computerChoice{
@@ -90,6 +91,7 @@ color: brown;
     display:flex;
     justify-content: center;
     color: brown;
+    transition: 0.4s;
 }
 .round-result{
     transition: 0.4s;
